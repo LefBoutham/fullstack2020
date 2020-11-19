@@ -1,14 +1,14 @@
 import React from "react";
 import Person from "./person";
 
-const Persons = ({ persons, filter }) => {
+const Persons = ({ persons, filter, onDelete }) => {
   const listFilter = (person) =>
     person.name.toLowerCase().includes(filter.toLowerCase());
 
   const personsList = persons
     .filter(listFilter)
     .map((person) => (
-      <Person key={person.name} name={person.name} number={person.number} />
+      <Person key={person.name} person={person} onDelete={onDelete} />
     ));
 
   return <>{personsList}</>;

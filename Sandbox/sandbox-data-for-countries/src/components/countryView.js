@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const CountryView = ({ country, display, weather }) => {
   if (display === true) {
