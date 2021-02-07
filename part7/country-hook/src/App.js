@@ -59,8 +59,8 @@ const Country = ({ country }) => {
 };
 
 const App = () => {
-  const nameInput = useField("text");
   const [name, setName] = useState("");
+  const nameInput = useField("text");
   const country = useCountry(name);
 
   const fetch = (e) => {
